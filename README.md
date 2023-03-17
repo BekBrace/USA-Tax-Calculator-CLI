@@ -17,6 +17,4 @@ Once the input is validated and the tax rate is retrieved from the database, the
 
 and total cost of the purchase and displays the results on the command line using the chalk package for colorful output.
 
-Overall, this application is a simple tool that can be useful for individuals or businesses that need to calculate the sales tax 
-
-and total cost of a purchase.
+Overall, this application is a simple tool that can be useful for individuals or businesses that need to calculate the sales tax and total cost of a purchase.
