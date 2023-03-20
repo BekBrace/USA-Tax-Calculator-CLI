@@ -96,15 +96,22 @@ inquirer
     },
   ])
   .then(({ amount, state }) => {
+//  This code block is retrieving the tax rate from a database table tax_rates based on a given state. 
+// It is using the db.get() method of a database object to execute an SQL query to retrieve the rate column 
+//from the tax_rates table where the state column matches the state variable provided as a parameter.
+ 
     db.get(
       `SELECT rate FROM
-      tax_rates WHERE state = ?`,
-      [state],
-      (err, row) => {
+      tax_rates WHERE state = ?`, //The first parameter is the SQL query with a placeholder ? for the state variable to be passed as a parameterized value.
+      [state], //The second parameter is an array containing the state value to replace the placeholder in the SQL query.
+      (err, row) => { //The third parameter is a callback function that takes two parameters, err and row.
         if (err) {
           console.error(chalk.red('An error occurred while retrieving tax rate data'));
           console.error(chalk.red(err));
           return;
+      // In the callback function, if an error occurs during the database query, it will log the error message to the console in red color 
+      // using the console.error() method and then return. If no error occurs, 
+      // the row parameter will contain the result of the database query with the rate value for the given state.
         }
 
         if (!row) {
