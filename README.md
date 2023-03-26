@@ -1,5 +1,5 @@
 # USA-Tax-Calculator-CLI
-USA Tax calculator in CLI display using Node.js programming language
+USA Tax calculator in CLI display using Node.js programming language.
 
 This is a command-line application built using Node.js that calculates the sales tax and total cost of
 
